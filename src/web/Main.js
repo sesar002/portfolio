@@ -1,17 +1,24 @@
 import React from "react";
+import About from "./about/About";
+import Home from "./home/Home";
 import Navbar from "./navbar/Navbar";
+import Sidebar from "./sidebar/Sidebar";
+import Portfolio from "./portfolio/Portfolio";
+import Contact from "./contact/Contact";
+import { useState } from "react";
 import "./style.scss";
 
 const Main = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="main">
-      <Navbar />
-      <div className="main-header">
-        <p>
-          Hi, my name is <span className="my-name">Luka Sesar.</span>
-        </p>
-        <p>I'm a front-end web developer.</p>
-      </div>
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Home />
+      <About />
+      <Portfolio />
+      <Contact />
     </div>
   );
 };

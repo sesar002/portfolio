@@ -1,0 +1,34 @@
+.main-header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-size: 30px;
+  p {
+    text-align: center;
+    padding: 5px;
+    z-index: 200;
+  }
+}
+.my-name {
+  color: #1000ff;
+  font-weight: bold;
+}
+.particles {
+  width: 100%;
+  height: 100%;
+}
+.header-top {
+  position: absolute;
+  top: 50vh;
+}
+.header-bottom {
+  position: absolute;
+  top: calc(50vh + 40px);
+  @media screen and (max-width: 385px) {
+    top: calc(50vh + 70px);
+  }
+}

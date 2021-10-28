@@ -17,7 +17,7 @@
 .nav-cont {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
   z-index: 500;
   width: 100%;
   padding: 0 24px;
@@ -29,7 +29,7 @@
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
-    top: 5px;
+    top: -4px;
     right: 0;
     transform: translate(-100%, 75%);
     font-size: 24px;
@@ -46,7 +46,7 @@
   text-align: center;
   margin-right: -22px;
   li {
-    height: 80px;
+    height: 60px;
   }
   @media screen and (max-width: 768px) {
     display: none;
@@ -70,10 +70,6 @@
 .nav-btn {
   display: flex;
   align-items: center;
-
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 }
 .nav-btn-link {
   clip-path: polygon(15% 0, 85% 0, 100% 50%, 84% 100%, 15% 100%, 0% 50%);

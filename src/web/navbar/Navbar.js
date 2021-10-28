@@ -3,11 +3,15 @@ import { FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
 import "./nav.scss";
 
-const Navbar = () => {
+const Navbar = ({ isOpen, setIsOpen }) => {
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-cont">
-        <div className="mobile-icon">
+        <div className="mobile-icon" onClick={toggle}>
           <FaBars />
         </div>
         <ul className="nav-menu">
@@ -27,7 +31,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="Contact" spy={true} smooth={true}>
+            <Link className="nav-link" to="contact" spy={true} smooth={true}>
               Contact
             </Link>
           </li>
