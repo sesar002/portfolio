@@ -14,21 +14,41 @@
   }
 }
 .my-name {
-  color: #1000ff;
+  color: #7066ff;
   font-weight: bold;
 }
 .particles {
   width: 100%;
   height: 100%;
 }
-.header-top {
+.move-up {
   position: absolute;
-  top: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 45vh;
 }
-.header-bottom {
-  position: absolute;
-  top: calc(50vh + 40px);
-  @media screen and (max-width: 385px) {
-    top: calc(50vh + 70px);
+
+.header-button {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  cursor: pointer;
+  font-size: 25px;
+  margin-top: 10px;
+  transition: background-color 0.5s, color 0.5s;
+  .arrow {
+    margin-left: 10px;
+    transition: transform 0.3s linear;
+  }
+  &:hover {
+    color: black;
+    background-color: white;
+    .arrow {
+      transform: rotate(90deg);
+    }
   }
 }

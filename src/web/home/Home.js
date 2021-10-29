@@ -1,6 +1,8 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-scroll";
 import Particles from "react-tsparticles";
+import { FaArrowRight } from "react-icons/fa";
 import "./home.scss";
 
 const Home = () => {
@@ -24,61 +26,36 @@ const Home = () => {
           fpsLimit: 60,
           interactivity: {
             detectsOn: "canvas",
-            events: {
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-              resize: true,
-            },
-            modes: {
-              bubble: {
-                distance: 400,
-                duration: 2,
-                opacity: 0.8,
-                size: 40,
-              },
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 100,
-                duration: 0.4,
-              },
-            },
           },
           particles: {
             color: {
               value: "#1000ff",
+              width: 5,
             },
             links: {
               color: "#ffffff",
               distance: 150,
               enable: true,
               opacity: 0.5,
-              width: 1,
+              width: 1.5,
             },
             collisions: {
-              enable: true,
+              enable: false,
             },
             move: {
               direction: "none",
               enable: true,
               outMode: "bounce",
               random: false,
-              speed: 3,
+              speed: 2,
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                value_area: 800,
+                value_area: 1200,
               },
-              value: 80,
+              value: 100,
             },
             opacity: {
               value: 0.5,
@@ -88,18 +65,25 @@ const Home = () => {
             },
             size: {
               random: true,
-              value: 5,
+              value: 8,
             },
           },
           detectRetina: true,
         }}
       />
-      <Fade left>
-        <p className="header-top">
-          Hi, my name is <span className="my-name">Luka Sesar.</span>
-        </p>
-        <p className="header-bottom">I'm a front-end web developer.</p>
-      </Fade>
+      <div className="move-up">
+        <Fade left>
+          <p className="header-top">
+            Hi, my name is <span className="my-name">Luka Sesar.</span>
+          </p>
+          <p className="header-bottom">I'm a front-end web developer.</p>
+        </Fade>
+        <Fade left>
+          <Link className="header-button" to="about" spy={true} smooth={true}>
+            View more <FaArrowRight className="arrow" />
+          </Link>
+        </Fade>
+      </div>
     </div>
   );
 };

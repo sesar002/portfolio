@@ -32,7 +32,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         <ul className="sidebar-menu">
           <Link
             className="sidbar-link"
-            to="Home"
+            to="home"
             onClick={toggle}
             spy={true}
             smooth={true}
@@ -50,12 +50,12 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
           </Link>
           <Link
             className="sidbar-link"
-            to="portfolio"
+            to="projects"
             onClick={toggle}
             spy={true}
             smooth={true}
           >
-            Portfolio
+            Projects
           </Link>
           <Link
             className="sidbar-link"

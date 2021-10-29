@@ -50,7 +50,7 @@
   transition: 0.2s ease-in-out;
   cursor: pointer;
   &:hover {
-    color: #1000ff;
+    color: #7066ff;
     transition: 0.2s ease-in-out;
   }
 }
@@ -62,7 +62,7 @@
 
 .sidebar-route {
   clip-path: polygon(15% 0, 85% 0, 100% 50%, 84% 100%, 15% 100%, 0% 50%);
-  background: #1000ff;
+  background: #7066ff;
   white-space: nowrap;
   padding: 15px 22px;
   color: white;

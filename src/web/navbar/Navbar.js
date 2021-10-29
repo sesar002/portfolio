@@ -26,8 +26,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" to="portfolio" spy={true} smooth={true}>
-              Portfolio
+            <Link className="nav-link" to="projects" spy={true} smooth={true}>
+              Projects
             </Link>
           </li>
           <li>
