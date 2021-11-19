@@ -1,27 +1,16 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { Link } from "react-scroll";
 import Particles from "react-tsparticles";
 import { FaArrowRight } from "react-icons/fa";
 import "./home.scss";
 
 const Home = () => {
-  const particlesInit = (main) => {
-    console.log(main);
-
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-  };
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
   return (
     <div className="main-header">
       <Particles
         id="tsparticles"
         className="particles"
-        init={particlesInit}
-        loaded={particlesLoaded}
         options={{
           fpsLimit: 60,
           interactivity: {
@@ -72,13 +61,13 @@ const Home = () => {
         }}
       />
       <div className="move-up">
-        <Fade left>
+        <Fade direction="left" triggerOnce>
           <p className="header-top">
             Hi, my name is <span className="my-name">Luka Sesar.</span>
           </p>
           <p className="header-bottom">I'm a front-end web developer.</p>
         </Fade>
-        <Fade left>
+        <Fade direction="left" triggerOnce>
           <Link className="header-button" to="about" spy={true} smooth={true}>
             View more <FaArrowRight className="arrow" />
           </Link>

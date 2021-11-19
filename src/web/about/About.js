@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import { FaLaptop, FaMobileAlt } from "react-icons/fa";
 import { BsSpeedometer } from "react-icons/bs";
 import { ImMagicWand } from "react-icons/im";
@@ -9,12 +9,12 @@ import "./about.scss";
 const About = () => {
   return (
     <div className="about">
-      <Fade left>
+      <Fade direction="left" triggerOnce>
         <h1>ABOUT</h1>
         <div className="underline"></div>
       </Fade>
       <div className="about-cont">
-        <Fade right>
+        <Fade direction="right" triggerOnce>
           <div className="box-cont">
             <div className="box-out">
               <div className="box-in">
